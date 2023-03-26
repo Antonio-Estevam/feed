@@ -103,8 +103,13 @@
     trsnsition: background-color 0.1s;
 }
 
-.commentForm footer button[type=submit]:hover {
+.commentForm footer button[type=submit]:not(:disabled):hover {
     background: var(--blue-300);
+}
+
+.commentForm footer button[type=submit]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 .commentList {
